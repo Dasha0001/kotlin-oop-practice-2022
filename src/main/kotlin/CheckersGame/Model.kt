@@ -4,16 +4,22 @@ import java.lang.Math.abs
 
 
 enum class CheckersMode {
-    QUEEN, CHECKERS, EMPTY,
+    QUEEN,
+    CHECKERS,
+    EMPTY,
 }
 
 enum class State(val textValue : String) {
-    WHITE_MOVE("Waiting for WHITE move..."), BLACK_MOVE("Waiting for BLACK move..."), WHITE_WIN("Game finished. WHITE win, congrats!!!"), BLACK_WIN(
-        "Game finished. BLACK win, congrats!!!"),
+    WHITE_MOVE("Waiting for WHITE move..."),
+    BLACK_MOVE("Waiting for BLACK move..."),
+    WHITE_WIN("Game finished. WHITE win, congrats!!!"),
+    BLACK_WIN("Game finished. BLACK win, congrats!!!"),
 }
 
 enum class Player {
-    WHITE, BLACK, EMPTY,
+    WHITE,
+    BLACK,
+    EMPTY,
 }
 
 private val FIRST_MOVE = State.WHITE_MOVE
@@ -30,7 +36,6 @@ class ModelGame {
     var state : State = FIRST_MOVE
 
     init {
-
         resetGame()
     }
 
